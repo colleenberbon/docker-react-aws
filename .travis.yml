@@ -5,7 +5,7 @@ services:
   - docker
 
 before install:
-  - docker build -t colleenberbon/docker-react-travis -f Dockerfile.dev .
+  - docker build -t colleenberbon/docker-react-aws -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true colleenberbon/docker-react-travis npm run test 
+  - docker run -e CI=true colleenberbon/docker-react-aws npm run test 
