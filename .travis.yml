@@ -4,7 +4,7 @@ language: generic
 services:
   - docker
 
-before install:
+before_install:
   - docker build -t colleenberbon/docker-react-aws -f Dockerfile.dev .
 
 script:
