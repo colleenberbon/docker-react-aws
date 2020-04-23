@@ -1,0 +1,11 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+before install:
+  - docker build -t colleenberbon/react-travis -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true colleenberbon/react-travis npm run test 
